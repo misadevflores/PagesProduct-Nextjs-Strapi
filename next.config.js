@@ -2,7 +2,7 @@
 
 const nextConfig = {
     images: {
-        domains: ['www.dashboard.hauscenter.com.bo']
+        domains: ['www.dominio.com.bo']
     },
 
 }
