@@ -6,10 +6,10 @@ import { addProductStore } from "@/lib/store";
 import { Plus, Minus } from 'lucide-react';
 import 'flowbite';
 import 'flowbite-react';
-import ConfetiComponent from '../ui/ConfertiAnimation';
+
 
 const StockProduct = ({ product }: any) => {
-    const [productoAñadido, setProductoAñadido] = useState(false);
+    
     const { toast } = useToast()
     const [loading, setLoading] = useState(true);
     const [available, setAvailable] = useState(false);
@@ -26,12 +26,7 @@ const StockProduct = ({ product }: any) => {
         }
     };
 
-    const añadirAlCarrito = () => {
-        setProductoAñadido(true);
-        setTimeout(() => {
-            setProductoAñadido(false);
-        }, 2000);
-    };
+ 
 
     return (
         <>
@@ -50,9 +45,9 @@ const StockProduct = ({ product }: any) => {
                     title: "Producto añadido al carrito",
                 })
                 addProductStore(product, q);
-                añadirAlCarrito();
+        
             }} className="rounded-full border-2 border-solid border-primary text-xl text-center dark:bg-sky-900 text-white font-bold bg-primary px-5">Comprar</button>
-            <ConfetiComponent active={productoAñadido} />
+
         </>
     )
 }
